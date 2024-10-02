@@ -18,7 +18,7 @@ java Main
 
 Testing Each Feature via the Interactive Interface
 Admin Functionalities
-1. User Management
+# 1. User Management
 
 ## Create User:
 
@@ -65,7 +65,7 @@ Listing users:
 [ID]: [Name] ([Role])
 ```
 
-2. Content Moderation
+# 2. Content Moderation
 
 List Pending Content:
 
@@ -95,7 +95,7 @@ Expected Output:
 ```
 Content [ID] rejected.
 ```
-3. System Settings
+# 3. System Settings
 
 Update Setting:
 
@@ -190,7 +190,7 @@ Expected Output:
 ```
 Content submitted for approval.
 ```
-3. Manage Music Portfolio
+# 3. Manage Music Portfolio
 
 Add Music File to Portfolio:
 
