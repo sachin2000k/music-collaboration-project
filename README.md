@@ -20,196 +20,203 @@ Testing Each Feature via the Interactive Interface
 Admin Functionalities
 1. User Management
 
-Create User:
+## Create User:
 
 Steps:
-Select 1 for Admin.
-Select 1 for User Management.
-Select 1 for Create User.
-Enter name and email when prompted.
+- Select 1 for Admin.
+- Select 1 for User Management.
+- Select 1 for Create User.
+- Enter name and email when prompted.
 Expected Output:
-css
-Copy code
+```
 User [Name] created successfully.
-Update User:
+```
+## Update User:
 
 Steps:
-While in User Management, select 2 for Update User.
-Enter the User ID to update.
+- While in User Management, select 2 for Update User.
+- Enter the User ID to update.
 Enter new name and email when prompted.
 Expected Output:
-css
-Copy code
+
+```
 User [ID] updated successfully.
-Delete User:
+```
+## Delete User:
 
 Steps:
-While in User Management, select 3 for Delete User.
-Enter the User ID to delete.
+- While in User Management, select 3 for Delete User.
+- Enter the User ID to delete.
+
 Expected Output:
-css
-Copy code
+
+```
 User [ID] deleted successfully.
-List Users:
+```
+
+## List Users:
 
 Steps:
-While in User Management, select 4 for List Users.
+- While in User Management, select 4 for List Users.
+
 Expected Output:
-markdown
-Copy code
+```
 Listing users:
 [ID]: [Name] ([Role])
+```
+
 2. Content Moderation
 
 List Pending Content:
 
 Steps:
-From the Admin Dashboard, select 2 for Content Moderation.
-Select 1 for List Pending Content.
+- From the Admin Dashboard, select 2 for Content Moderation.
+- Select 1 for List Pending Content.
 Expected Output:
-markdown
-Copy code
+```
 Listing pending content:
 [ID]: [Details]
-Approve Content:
+```
+## Approve Content:
 
 Steps:
-From Content Moderation, select 2 for Approve Content.
-Enter the Content ID to approve.
+- From Content Moderation, select 2 for Approve Content.
+- Enter the Content ID to approve.
 Expected Output:
-css
-Copy code
+```
 Content [ID] approved.
+```
 Reject Content:
 
 Steps:
-From Content Moderation, select 3 for Reject Content.
-Enter the Content ID to reject.
+- From Content Moderation, select 3 for Reject Content.
+- Enter the Content ID to reject.
 Expected Output:
-css
-Copy code
+```
 Content [ID] rejected.
+```
 3. System Settings
 
 Update Setting:
 
 Steps:
-From the Admin Dashboard, select 3 for System Settings.
-Select 1 for Update Setting.
-Enter setting name and value when prompted.
+- From the Admin Dashboard, select 3 for System Settings.
+- Select 1 for Update Setting.
+- Enter setting name and value when prompted.
 Expected Output:
-sql
-Copy code
+```
 System settings updated.
+```
 View Setting:
 
 Steps:
-From System Settings, select 2 for View Setting.
-Enter the setting name to view its value.
+- From System Settings, select 2 for View Setting.
+- Enter the setting name to view its value.
 Expected Output:
-css
-Copy code
+```
 Setting [name] = [value]
+```
 Musician Functionalities
 1. Project Collaboration
 
 Create Project:
 
 Steps:
-Select 2 for Musician.
-Enter your Musician User ID.
-Select 1 for Project Collaboration.
-Select 1 for Create Project.
-Enter project description and deadline.
+    Select 2 for Musician.
+    Enter your Musician User ID.
+    Select 1 for Project Collaboration.
+    Select 1 for Create Project.
+    Enter project description and deadline.
 Expected Output:
-css
-Copy code
+```
 Project [Description] created.
-Add Collaborator to Project:
+```
+
+## Add Collaborator to Project:
 
 Steps:
-From Project Collaboration, select 2 for Add Collaborator.
-Enter Project ID and Collaborator User ID.
+- From Project Collaboration, select 2 for Add Collaborator.
+- Enter Project ID and Collaborator User ID.
 Expected Output:
-css
-Copy code
+
+```
 Collaborator [Name] added to project.
-List Projects:
+```
+## List Projects:
 
 Steps:
-From Project Collaboration, select 3 for List Projects.
+- From Project Collaboration, select 3 for List Projects.
 Expected Output:
-markdown
-Copy code
+```
 Listing projects:
 [ID]: [Description]
+```
 2. Share and Edit Music Files
 
 Upload Music File:
 
 Steps:
-From Musician Dashboard, select 2 for Share and Edit Music Files.
-Select 1 for Upload Music File.
-Enter the music file name.
+- From Musician Dashboard, select 2 for Share and Edit Music Files.
+- Select 1 for Upload Music File.
+- Enter the music file name.
 Expected Output:
-css
-Copy code
+```
 Music file [FileName] uploaded.
-Edit Music File:
+```
+## Edit Music File:
 
 Steps:
-From Music Files, select 2 for Edit Music File.
-Enter Music File ID and new content.
+- From Music Files, select 2 for Edit Music File.
+- Enter Music File ID and new content.
 Expected Output:
-css
-Copy code
+```
 Music file [ID] edited.
-List Music Files:
+```
+## List Music Files:
 
 Steps:
-From Music Files, select 3 for List Music Files.
+- From Music Files, select 3 for List Music Files.
 Expected Output:
-markdown
-Copy code
+```
 Listing music files:
 [ID]: [FileName]
 Submit Content for Approval:
+```
 
 Steps:
-From Music Files, select 4 for Submit Content for Approval.
-Enter Music File ID to submit.
+- From Music Files, select 4 for Submit Content for Approval.
+- Enter Music File ID to submit.
 Expected Output:
-css
-Copy code
+```
 Content submitted for approval.
+```
 3. Manage Music Portfolio
 
 Add Music File to Portfolio:
 
 Steps:
-From Musician Dashboard, select 3 for Manage Music Portfolio.
-Select 1 for Add Music File to Portfolio.
-Enter Music File ID.
+- From Musician Dashboard, select 3 for Manage Music Portfolio.
+- Select 1 for Add Music File to Portfolio.
+- Enter Music File ID.
 Expected Output:
-css
-Copy code
+```
 Music file [FileName] added to portfolio.
-Update Portfolio:
+```
+## Update Portfolio:
 
 Steps:
-From Music Portfolio, select 2 for Update Portfolio.
+- From Music Portfolio, select 2 for Update Portfolio.
 Expected Output:
-markdown
-Copy code
+```
 Portfolio updated. Current songs:
 [ID]: [FileName]
+```
 Sample Run
 Here's a sample interaction to guide you through:
 
 Start the Program
 
-markdown
-Copy code
+```
 Welcome to the Online Music Collaboration Platform!
 
 Select User Type:
@@ -217,6 +224,7 @@ Select User Type:
 2. Musician
 3. Exit
 Enter choice: 
+```
 Log in as Admin and Create Users
 
 Enter 1 for Admin.
