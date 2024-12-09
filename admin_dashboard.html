@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - User Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ3QhqLMpG8r+KnujsvNQ9gOqEJbM0Pb7+M5tmI7XjTZt69ZaK93Qmy2U57Z" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkMcmS7gDj3vvsI/7c3gW9CZXpo1vlddk/ZR/pz2u6e1jz79joKX" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #f9fafb;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+        }
+        h1 {
+            color: #333;
+            font-size: 2.5rem;
+        }
+        .form-control, .form-select {
+            border-radius: 0.5rem;
+        }
+        .card {
+            margin-top: 1rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-header {
+            background-color: #0069d9;
+            color: white;
+            text-align: center;
+            font-size: 1.25rem;
+            border-radius: 0.75rem 0.75rem 0 0;
+        }
+        .card-body {
+            background-color: #ffffff;
+            padding: 1.5rem;
+        }
+        .btn-custom {
+            background-color: #0069d9;
+            color: white;
+            border-radius: 0.5rem;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        .user-card {
+            background-color: #f1f1f1;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .user-card h5 {
+            color: #333;
+            font-size: 1.2rem;
+        }
+        .user-card p {
+            color: #555;
+        }
+        .user-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h1>Admin Dashboard - User Management</h1>
+            </div>
+            <div class="card-body">
+                <form id="createUserForm">
+                    <div class="mb-3">
+                        <label for="userName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="userName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="userEmail" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="userRole" class="form-label">Role</label>
+                        <select class="form-select" id="userRole" required>
+                            <option value="Musician">Musician</option>
+                            <option value="Admin">Admin</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-custom w-100">Create User</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mt-4">
+            <div class="card-body">
+                <h2 class="text-center">Existing Users</h2>
+                <div id="userList" class="user-list">
+                    <!-- Dummy Data - Users shown as cards -->
+                    <div class="user-card">
+                        <h5>John Doe</h5>
+                        <p>Role: Musician</p>
+                        <p>Email: john.doe@example.com</p>
+                    </div>
+                    <div class="user-card">
+                        <h5>Jane Smith</h5>
+                        <p>Role: Admin</p>
+                        <p>Email: jane.smith@example.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Handle form submission
+        $('#createUserForm').on('submit', function(e) {
+            e.preventDefault();
+            let name = $('#userName').val();
+            let email = $('#userEmail').val();
+            let role = $('#userRole').val();
+
+            // Add new user to the list as a card
+            let userList = $('#userList');
+            userList.append(`
+                <div class="user-card">
+                    <h5>${name}</h5>
+                    <p>Role: ${role}</p>
+                    <p>Email: ${email}</p>
+                </div>
+            `);
+
+            // Reset the form
+            $('#createUserForm')[0].reset();
+        });
+    </script>
+
+</body>
+</html>
